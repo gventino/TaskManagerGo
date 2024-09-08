@@ -1,0 +1,12 @@
+package views
+
+import "main/views/partial"
+
+templ TasksPage(children ...templ.Component){
+    @partial.HeaderComponent("Tasks Page")
+    <div class="mb mb-6 mt-10 grid grid-cols-1 justify-items-center">
+        for _, child := range children{
+            @child
+        }
+    </div>
+}

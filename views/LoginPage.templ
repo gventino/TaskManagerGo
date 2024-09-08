@@ -1,0 +1,20 @@
+package views
+
+import "main/views/partial"
+
+templ LoginPage(){
+    @partial.HeaderComponent("Login Page")
+    
+    <div class="flex justify-center mt-10">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+
+            @partial.LabelInputComponent("text", "Username")
+
+            <div class="flex items-center justify-between">
+                <button class="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" hx-post="/login/processing" trigger="on click" hx-swap="none">
+                    Sign In
+                </button>
+            </div>
+        </form>
+    </div>
+}
